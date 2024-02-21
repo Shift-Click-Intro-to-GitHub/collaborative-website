@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title>Quiz</title>
+        <link rel="icon" type="image/png" href="images/SA.png"/> 
+        <meta charset="UTF-80">
+        <link rel="stylesheet" href="style.css">   
+
+    </head>
+
+    <body>
+        <ul id="navBar">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+
+        <h1>Quiz!</h1>
+        <p>Here is a quick quiz to work out which of our wiki animals you are:</p>
+
+        <div id="quizContainer">
+        <form name="Quiz">
+            <!-- Q1-->
+            <h3>Question 1</h3>
+            <p>Which is your favourite picture?</p>
+        
+            <input type="radio" name="pic" value="cat">
+            <label for="cat" class="pic"><img src="images/cat-with-mouse.jfif" height="100"></label><br>
+            <input type="radio" name="pic" value="capybara">
+            <label for="capybara" class="pic"><img src="images/CapybaraMicrophone.jpg" height="100"></label><br>
+            <input type="radio" name="pic" value="elephant">
+            <label for="elephant" class="pic"><img src="images/elephants.jpg" height="100"></label><br>
+            <input type="radio" name="pic" value="honeybadger">
+            <label for="honeybadger" class="pic"><img src="images/honeyBadger1.jpg" height="100"></label><br>
+            <input type="radio" name="pic" value="seaslug">
+            <label for="seaslug" class="pic"><img src="images/leaf-sheep-sea-slugjimlynn.webp" height="100"></label><br>
+
+           
+        </form>
+        <button type="button" onclick="checkAnswers();">DONE</button>
+        </div>
+    
+
+
+    <script>
+        //assign quiz element to the quiz variable
+        function checkAnswers () {
+            let quiz = document.forms.Quiz.elements.pic.value;
+
+            alert ("You are a " + quiz + "!");
+    }
+    </script>
+
+    </body>
+
+</html>
